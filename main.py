@@ -1,4 +1,12 @@
 import streamlit as st
+
+# Configure Streamlit page
+st.set_page_config(
+    page_title="Resume Analyzer",
+    page_icon="📝",
+    layout="wide"
+)
+
 from groq import Groq
 import PyPDF2
 import io
@@ -36,13 +44,6 @@ def upload_item_to_dynamodb(table_name, item):
         print(f"Error uploading item: {e.response['Error']['Message']}")
 '''
 
-
-# Configure Streamlit page
-st.set_page_config(
-    page_title="Resume Analyzer",
-    page_icon="📝",
-    layout="wide"
-)
 
 # Custom CSS for better styling
 st.markdown("""
