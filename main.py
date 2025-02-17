@@ -17,7 +17,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 # Set up the DynamoDB client using environment variables
-aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
+'''aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
 aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
 aws_region = os.environ.get('AWS_REGION', 'ap-south-1')
 
@@ -34,7 +34,7 @@ def upload_item_to_dynamodb(table_name, item):
         print(f"Item uploaded successfully: {response}")
     except ClientError as e:
         print(f"Error uploading item: {e.response['Error']['Message']}")
-
+'''
 
 
 # Configure Streamlit page
