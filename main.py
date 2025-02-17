@@ -26,8 +26,8 @@ dynamodb = boto3.resource('dynamodb',
                           aws_access_key_id=aws_access_key_id,
                           aws_secret_access_key=aws_secret_access_key)
 
-#def upload_item_to_dynamodb(table_name, item):
-    #table = dynamodb.Table(table_name)
+def upload_item_to_dynamodb(table_name, item):
+    table = dynamodb.Table(table_name)
     
     try:
         response = table.put_item(Item=item)
